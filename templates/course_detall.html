@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{course.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2>{{course.title}}</h2>
+            <p class="card-text">{{course.description}}</p>
+        </div>
+        <a href="{% 'course_update' course.id %}">Update</a>
+        <a href="{% 'course_delete' course.id %}">delete</a>
+<!--        <button type="button" href="{% url 'course_update' course.id%}" class="btn btn-secondary btn-sm">Update</button>-->
+<!--        <button type="button" class="btn btn-primary btn-sm">Delete</button>-->
+    </div>
+
+{% endblock %}

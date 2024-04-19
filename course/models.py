@@ -12,10 +12,8 @@ class Speciality(models.Model):
 
 class Course(models.Model):
     class PriceType(models.TextChoices):
-        s = 'USD', '$'
-        sum = "UZS", "som"
-
-
+        s = '$', '$'
+        sum = "som", "som"
 
 
     title = models.CharField(max_length=50)

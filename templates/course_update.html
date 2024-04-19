@@ -1,0 +1,19 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+    <div> class="card" style="width: 18rem;">
+        <form method="post">
+            {% csrf_token %}
+            <label for="title"></label>
+            <input id="title" placeholder="Title" name="title" value="{{course.title"><br> <br>
+
+            <label for="description"></label>
+            <input id="description" placeholder="description" name="description" value="{{course.description}}"><br> <br>
+
+            <label for="price"></label>
+            <input id="price" placeholder="price" name="price" value="{{course.price"><br> <br>
+        </form>
+        <button type="submit"> update</button>
+    </div>
+
+{% endblock %}

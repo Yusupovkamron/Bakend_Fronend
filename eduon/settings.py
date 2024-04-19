@@ -4,6 +4,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
     'users',
     'course',
     'blog',
+
 ]
 
 MIDDLEWARE = [
@@ -134,15 +138,33 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+# STATIC_URL = 'static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
+#
+# MEDIA_URL = 'media/'
+# MEDIAFILES_DIRS = [
+#     BASE_DIR / "media",
+# ]
+
+
+
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = 'media/'
-MEDIAFILES_DIRS = [
-    BASE_DIR / "media",
-]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+
+
+
+
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

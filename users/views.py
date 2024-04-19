@@ -17,3 +17,4 @@ class LandingPageView(View):
             "blogs": Blog,
         }
         return render(request, "main/index.html", context)
+
